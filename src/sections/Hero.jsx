@@ -33,6 +33,15 @@ function Hero() {
   <div className="particle particle-2"></div>
   <div className="particle particle-3"></div>
 </div>
+
+
+ {/* NEW */}
+  <div className="mesh-bg"></div>
+
+  <div className="light-orb orb-1 top-0 left-0"></div>
+
+  <div className="light-orb orb-2 bottom-0 right-0"></div>
+
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -274,17 +283,45 @@ hover:scale-105
 
     {/* Orbit Icons */}
 
-<div className="orbit orbit-1"><FaReact size={26} /></div>
-<div className="orbit orbit-2"><FaPython size={26} /></div>
-<div className="orbit orbit-3"><SiJavascript size={26} /></div>
-<div className="orbit orbit-4"><FaNodeJs size={26} /></div>
-<div className="orbit orbit-5"><SiMongodb size={26} /></div>
+<div className="orbit orbit-1">
+  <FaReact size={30} color="#61DAFB" />
+</div>
 
-<div className="orbit orbit-6"><SiMysql size={26} /></div>
-<div className="orbit orbit-7"><FaGitAlt size={26} /></div>
-<div className="orbit orbit-8"><FaGithub size={26} /></div>
-<div className="orbit orbit-9"><SiTailwindcss size={26} /></div>
-<div className="orbit orbit-10"><FaReact size={26} /></div>
+<div className="orbit orbit-2">
+  <FaPython size={30} color="#3776AB" />
+</div>
+
+<div className="orbit orbit-3">
+  <SiJavascript size={30} color="#F7DF1E" />
+</div>
+
+<div className="orbit orbit-4">
+  <FaNodeJs size={30} color="#68A063" />
+</div>
+
+<div className="orbit orbit-5">
+  <SiMongodb size={30} color="#47A248" />
+</div>
+
+<div className="orbit orbit-6">
+  <SiMysql size={30} color="#4479A1" />
+</div>
+
+<div className="orbit orbit-7">
+  <FaGitAlt size={30} color="#F05032" />
+</div>
+
+<div className="orbit orbit-8">
+  <FaGithub size={30} color="#FFFFFF" />
+</div>
+
+<div className="orbit orbit-9">
+  <SiTailwindcss size={30} color="#06B6D4" />
+</div>
+
+<div className="orbit orbit-10">
+  <FaReact size={30} color="#61DAFB" />
+</div>
 
   
 
