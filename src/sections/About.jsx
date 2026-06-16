@@ -10,6 +10,9 @@ function About() {
 
       {/* Animated Background Particles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {/* Floating Background Orbs */}
+<div className="about-orb about-orb-1"></div>
+<div className="about-orb about-orb-2"></div>
   <div className="particle particle-1"></div>
   <div className="particle particle-2"></div>
   <div className="particle particle-3"></div>
@@ -77,7 +80,7 @@ function About() {
               padding: "3.5rem 3rem",
                 minHeight: "750px",
             }}
-            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500"
+            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-blue-400/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.35)] hover:-translate-y-2 transition-all duration-500"
             initial={{ opacity: 0, x: -60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{
@@ -153,17 +156,32 @@ function About() {
                 gap: "1rem",
               }}
             >
-              <span className="about-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300">
-                📍 West Bengal, India
-              </span>
+              <a
+  href="https://www.google.co.in/maps/place/124%2F7,+Kumor+Para,+Purba+Barisha,+Kolkata,+West+Bengal+700008/@22.4783287,88.3197897,19z/data=!3m1!4b1!4m6!3m5!1s0x3a027a79be578cdb:0x7df43ce9307e40db!8m2!3d22.4783287!4d88.3204334!16s%2Fg%2F11x6rk8xl7?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="about-tag location-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
+>
+  📍 West Bengal, India
+</a>
 
-              <span className="about-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300">
-                🎓 BCA Student
-              </span>
+              <a
+  href="https://bhawanipurglobal.edu.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="about-tag college-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
+>
+  🎓 BCA Student
+</a>
 
-              <span className="about-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300">
-                💼 Open to Work
-              </span>
+              <a
+  href="https://www.linkedin.com/in/iamsayanmanna/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="about-tag linkedin-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
+>
+  💼 Open to Work
+</a>
             </div>
           </motion.div>
 
@@ -173,7 +191,7 @@ function About() {
               padding: "3.5rem 3rem",
                 minHeight: "750px",
             }}
-            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500"
+            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.35)] hover:-translate-y-2 transition-all duration-500"
             initial={{ opacity: 0, x: 60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{

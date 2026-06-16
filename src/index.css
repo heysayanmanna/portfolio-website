@@ -199,65 +199,56 @@ button, a {
     0 0 50px rgba(168,85,247,.2);
 }
 
-.orbit-1{
-  animation: orbitOuter 18s linear infinite;
-}
+/* OUTER RING - 8 LOGOS */
 
-.orbit-2{
-  animation: orbitOuter 18s linear infinite;
-  animation-delay: -2s;
-}
+.orbit-1 { animation: orbitOuter 18s linear infinite; animation-delay: 0s; }
 
-.orbit-3{
-  animation: orbitOuter 18s linear infinite;
-  animation-delay: -4s;
-}
+.orbit-2 { animation: orbitOuter 18s linear infinite; animation-delay: -2.25s; }
 
-.orbit-4{
-  animation: orbitOuter 18s linear infinite;
-  animation-delay: -6s;
-}
+.orbit-3 { animation: orbitOuter 18s linear infinite; animation-delay: -4.5s; }
 
-.orbit-5{
-  animation: orbitOuter 18s linear infinite;
-  animation-delay: -8s;
-}
+.orbit-4 { animation: orbitOuter 18s linear infinite; animation-delay: -6.75s; }
 
-.orbit-6{
-  animation: orbitInner 14s linear infinite reverse;
-}
+.orbit-5 { animation: orbitOuter 18s linear infinite; animation-delay: -9s; }
 
-.orbit-7{
-  animation: orbitInner 14s linear infinite reverse;
-  animation-delay: -2s;
-}
+.orbit-6 { animation: orbitOuter 18s linear infinite; animation-delay: -11.25s; }
 
-.orbit-8{
-  animation: orbitInner 14s linear infinite reverse;
-  animation-delay: -4s;
-}
+.orbit-7 { animation: orbitOuter 18s linear infinite; animation-delay: -13.5s; }
 
-.orbit-9{
-  animation: orbitInner 14s linear infinite reverse;
-  animation-delay: -6s;
-}
+.orbit-8 { animation: orbitOuter 18s linear infinite; animation-delay: -15.75s; }
 
-.orbit-10{
-  animation: orbitInner 14s linear infinite reverse;
-  animation-delay: -8s;
-}
+
+/* INNER RING - 7 LOGOS */
+
+.orbit-9  { animation: orbitInner 16s linear infinite reverse; animation-delay: 0s; }
+
+.orbit-10 { animation: orbitInner 16s linear infinite reverse; animation-delay: -2s; }
+
+.orbit-11 { animation: orbitInner 16s linear infinite reverse; animation-delay: -4s; }
+
+.orbit-12 { animation: orbitInner 16s linear infinite reverse; animation-delay: -6s; }
+
+.orbit-13 { animation: orbitInner 16s linear infinite reverse; animation-delay: -8s; }
+
+.orbit-14 { animation: orbitInner 16s linear infinite reverse; animation-delay: -10s; }
+
+.orbit-15 { animation: orbitInner 16s linear infinite reverse; animation-delay: -12s; }
+
+.orbit-16 { animation: orbitInner 16s linear infinite reverse; animation-delay: -14s; }
+
+
 
 @keyframes orbitOuter{
   from{
     transform:
       rotate(0deg)
-      translateX(320px)
+      translateX(340px)
       rotate(0deg);
   }
   to{
     transform:
       rotate(360deg)
-      translateX(320px)
+      translateX(340px)
       rotate(-360deg);
   }
 }
@@ -310,14 +301,38 @@ nav{
 }
 
 .about-tag{
-  transition: all .35s ease;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .35s ease;
 }
 
 .about-tag:hover{
-  transform: translateY(-4px);
-  border-color: rgba(59,130,246,.4);
-  box-shadow: 0 0 20px rgba(59,130,246,.15);
+  transform:translateY(-6px) scale(1.05);
 }
+
+
+.about-tag::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:-120%;
+
+  width:80px;
+  height:100%;
+
+  background:rgba(255,255,255,.12);
+
+  transform:skewX(-25deg);
+
+  transition:1s;
+}
+
+.about-tag:hover::before{
+  left:140%;
+}
+
 
 .skill-pill{
   position:relative;
@@ -776,4 +791,77 @@ nav{
   50%{
     transform:translate(-120px,90px);
   }
+}
+
+
+/* ABOUT FLOATING ORBS */
+
+#about{
+  position: relative;
+  overflow: hidden;
+}
+
+.about-orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(130px);
+  pointer-events:none;
+}
+
+.about-orb-1{
+  width:350px;
+  height:350px;
+
+  left:10%;
+  top:20%;
+
+  background:rgba(59,130,246,.10);
+
+  animation:aboutOrbFloat1 12s ease-in-out infinite;
+}
+
+.about-orb-2{
+  width:400px;
+  height:400px;
+
+  right:10%;
+  bottom:15%;
+
+  background:rgba(168,85,247,.10);
+
+  animation:aboutOrbFloat2 14s ease-in-out infinite;
+}
+
+@keyframes aboutOrbFloat1{
+  50%{
+    transform:translate(80px,-50px);
+  }
+}
+
+@keyframes aboutOrbFloat2{
+  50%{
+    transform:translate(-80px,60px);
+  }
+}
+
+
+.location-tag:hover{
+  border-color:#34A853;
+
+  box-shadow:
+  0 0 25px rgba(52,168,83,.35);
+}
+
+.college-tag:hover{
+  border-color:#8B5CF6;
+
+  box-shadow:
+  0 0 25px rgba(139,92,246,.35);
+}
+
+.linkedin-tag:hover{
+  border-color:#0A66C2;
+
+  box-shadow:
+  0 0 25px rgba(10,102,194,.35);
 }

@@ -12,6 +12,7 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaFigma,
 } from "react-icons/fa";
 
 import {
@@ -19,6 +20,12 @@ import {
   SiMongodb,
   SiMysql,
   SiTailwindcss,
+  SiTypescript,
+  SiFirebase,
+  SiVercel, 
+  SiDocker,
+  SiPostman,
+  SiRedux,
 } from "react-icons/si";
 
 function Hero() {
@@ -283,6 +290,8 @@ hover:scale-105
 
     {/* Orbit Icons */}
 
+{/* OUTER RING - 8 LOGOS */}
+
 <div className="orbit orbit-1">
   <FaReact size={30} color="#61DAFB" />
 </div>
@@ -315,14 +324,40 @@ hover:scale-105
   <FaGithub size={30} color="#FFFFFF" />
 </div>
 
+
+{/* INNER RING - 8 LOGOS */}
+
 <div className="orbit orbit-9">
   <SiTailwindcss size={30} color="#06B6D4" />
 </div>
 
 <div className="orbit orbit-10">
-  <FaReact size={30} color="#61DAFB" />
+  <FaFigma size={30} color="#F24E1E" />
 </div>
 
+<div className="orbit orbit-11">
+  <SiTypescript size={30} color="#3178C6" />
+</div>
+
+<div className="orbit orbit-12">
+  <SiFirebase size={30} color="#FFCA28" />
+</div>
+
+<div className="orbit orbit-13">
+  <SiVercel size={30} color="#FFFFFF" />
+</div>
+
+<div className="orbit orbit-14">
+  <SiDocker size={30} color="#2496ED" />
+</div>
+
+<div className="orbit orbit-15">
+  <SiPostman size={30} color="#FF6C37" />
+</div>
+
+<div className="orbit orbit-16">
+  <SiRedux size={30} color="#764ABC" />
+</div>
   
 
     {/* Glow */}
