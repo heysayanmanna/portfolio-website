@@ -5,20 +5,50 @@ const skills = [
   { name: "CSS3", icon: "devicon-css3-plain colored" },
   { name: "JavaScript", icon: "devicon-javascript-plain colored" },
   { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+
   { name: "React", icon: "devicon-react-original colored" },
   { name: "Next.js", icon: "devicon-nextjs-plain" },
+  { name: "Redux Toolkit", icon: "devicon-redux-original colored" },
+
   { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+  { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
   { name: "Framer Motion", icon: "devicon-framermotion-original" },
+
   { name: "Node.js", icon: "devicon-nodejs-plain colored" },
   { name: "Express.js", icon: "devicon-express-original" },
+  { name: "REST API", icon: "devicon-fastapi-plain colored" },
+  { name: "JWT Auth", icon: "devicon-json-plain" },
+  { name: "Socket.io", icon: "devicon-socketio-original" },
+  { name: "GraphQL", icon: "devicon-graphql-plain colored" },
+  { name: "Microservices", icon: "devicon-docker-plain colored" },
+
   { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+  { name: "MySQL", icon: "devicon-mysql-plain colored" },
+  { name: "SQL", icon: "devicon-azuresqldatabase-plain colored" },
+  { name: "Redis", icon: "devicon-redis-plain colored" },
+  { name: "Firebase", icon: "devicon-firebase-plain colored" },
+
   { name: "Python", icon: "devicon-python-plain colored" },
+  { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
+  { name: "Pandas", icon: "devicon-pandas-original colored" },
+  { name: "NumPy", icon: "devicon-numpy-original colored" },
+  { name: "Selenium", icon: "devicon-selenium-original colored" },
+
+  { name: "Docker", icon: "devicon-docker-plain colored" },
+  { name: "Kubernetes", icon: "devicon-kubernetes-plain colored" },
+  { name: "AWS", icon: "devicon-amazonwebservices-original colored" },
+  { name: "Vercel", icon: "devicon-vercel-original" },
+
   { name: "Git", icon: "devicon-git-plain colored" },
   { name: "GitHub", icon: "devicon-github-original" },
+  { name: "GitHub Actions", icon: "devicon-githubactions-plain colored" },
+
+  { name: "Linux", icon: "devicon-linux-plain" },
+  { name: "NPM", icon: "devicon-npm-original-wordmark colored" },
+
   { name: "VS Code", icon: "devicon-vscode-plain colored" },
-  { name: "Figma", icon: "devicon-figma-plain colored" },
   { name: "Postman", icon: "devicon-postman-plain colored" },
-  { name: "Vercel", icon: "devicon-vercel-original" },
+  { name: "Figma", icon: "devicon-figma-plain colored" },
 ];
 
 function Skills() {
