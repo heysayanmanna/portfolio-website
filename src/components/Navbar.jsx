@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,35 +17,66 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+  const sections = ["home", "about", "skills", "projects", "contact"];
+
+  const handleActiveSection = () => {
+    const scrollPosition = window.scrollY + 150;
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+
+      if (
+        element &&
+        scrollPosition >= element.offsetTop &&
+        scrollPosition < element.offsetTop + element.offsetHeight
+      ) {
+        setActiveSection(section);
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleActiveSection);
+
+  return () => {
+    window.removeEventListener("scroll", handleActiveSection);
+  };
+}, []);
+
   const navItems = [
-    { name: "Home", link: "#home" },
-    { name: "About", link: "#about" },
-    { name: "Skills", link: "#skills" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" },
-  ];
+  { name: "Home", link: "#home", id: "home" },
+  { name: "About", link: "#about", id: "about" },
+  { name: "Skills", link: "#skills", id: "skills" },
+  { name: "Projects", link: "#projects", id: "projects" },
+  { name: "Contact", link: "#contact", id: "contact" },
+];
 
   return (
     <nav className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
 
       <div
-        className={`w-full max-w-[1400px] flex items-center justify-between px-10 py-2 rounded-[20px] border transition-all duration-300 ${
+        className={`w-full max-w-[1350px] flex items-center justify-between px-10 py-3 rounded-[24px] border transition-all duration-300 ${
           scrolled
-            ? "bg-black/80 border-white/10 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
-            : "bg-black/60 border-white/10 backdrop-blur-xl"
+            ? "bg-white/[0.04] border-white/5 backdrop-blur-3xl shadow-[0_8px_32px_rgba(59,130,246,0.15)] shadow-[0_0_40px_rgba(59,130,246,0.12)]"
+: "bg-white/[0.02] border-white/5 backdrop-blur-2xl shadow-[0_0_30px_rgba(59,130,246,0.08)]"
         }`}
+        style={{
+    background:
+      "linear-gradient(90deg, rgba(59,130,246,0.05), rgba(139,92,246,0.05))",
+  }}
       >
 
         {/* Logo */}
         <a
           href="#home"
           className="
-          text-4xl
+          text-3xl xl:text-4xl
           font-black
           tracking-tight
           transition-all
           duration-300
           hover:scale-105
+          hover:drop-shadow-[0_0_15px_rgba(96,165,250,0.8)]
           "
         >
           <span className="gradient-text">
@@ -63,37 +95,41 @@ function Navbar() {
             >
 
               <a
-                href={item.link}
-  className="
-  text-gray-300
-  text-lg
-  hover:text-white
-  transition-all
-  duration-300
-  hover:scale-105
-  inline-block
-  text-[18px]
-                "
-              >
-                {item.name}
-              </a>
+  href={item.link}
+  className={`
+    inline-block
+    text-[18px]
+    transition-all
+    duration-300
+    hover:scale-105
+    ${
+      activeSection === item.id
+        ? "text-white"
+        : "text-gray-300 hover:text-white"
+    }
+  `}
+>
+  {item.name}
+</a>
 
               <span
-                className="
-                absolute
-                left-0
-                -bottom-2
-                h-[2px]
-                w-0
-                bg-gradient-to-r
-                from-blue-500
-                to-purple-500
-                transition-all
-                duration-300
-                group-hover:w-full
-                 text-size [150px]
-                "
-              ></span>
+  className={`
+    absolute
+    left-0
+    -bottom-2
+    h-[2px]
+    bg-gradient-to-r
+    from-blue-500
+    to-purple-500
+    transition-all
+    duration-300
+    ${
+      activeSection === item.id
+        ? "w-full"
+        : "w-0 group-hover:w-full"
+    }
+  `}
+></span>
 
             </li>
 
@@ -122,6 +158,7 @@ function Navbar() {
           hover:scale-110
           hover:shadow-xl
           hover:shadow-purple-500/30
+          hover:shadow-blue-500/30
           transition-all
           duration-300
           "
@@ -138,7 +175,7 @@ function Navbar() {
           "
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          <span className="text-4xl font-light">☰</span>
         </button>
 
       </div>
@@ -151,11 +188,11 @@ function Navbar() {
           top-full
           mt-3
           w-full
-          max-w-[1300px]
+          max-w-[1350px]
           bg-black/95
           border
-          border-white/10
-          rounded-[20px]
+          border-white/15
+          rounded-[24px]
           p-6
           backdrop-blur-2xl
           lg:hidden

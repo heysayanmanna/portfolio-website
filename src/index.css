@@ -242,13 +242,13 @@ button, a {
   from{
     transform:
       rotate(0deg)
-      translateX(340px)
+      translateX(370px)
       rotate(0deg);
   }
   to{
     transform:
       rotate(360deg)
-      translateX(340px)
+      translateX(370px)
       rotate(-360deg);
   }
 }
@@ -257,15 +257,51 @@ button, a {
   from{
     transform:
       rotate(0deg)
-      translateX(260px)
+      translateX(290px)
       rotate(0deg);
   }
   to{
     transform:
       rotate(360deg)
-      translateX(260px)
+      translateX(290px)
       rotate(-360deg);
   }
+}
+
+/* MOBILE RESPONSIVE ORBITS */
+
+@media (max-width: 640px){
+
+  @keyframes orbitOuter{
+    from{
+      transform:
+        rotate(0deg)
+        translateX(170px)
+        rotate(0deg);
+    }
+    to{
+      transform:
+        rotate(360deg)
+        translateX(170px)
+        rotate(-360deg);
+    }
+  }
+
+  @keyframes orbitInner{
+    from{
+      transform:
+        rotate(0deg)
+        translateX(130px)
+        rotate(0deg);
+    }
+    to{
+      transform:
+        rotate(360deg)
+        translateX(130px)
+        rotate(-360deg);
+    }
+  }
+
 }
 
 nav{
@@ -864,4 +900,28 @@ nav{
 
   box-shadow:
   0 0 25px rgba(10,102,194,.35);
+}
+
+
+
+
+
+
+/* MOBILE ORBIT SIZE */
+
+@media (max-width:640px){
+
+  .orbit{
+    width:42px;
+    height:42px;
+
+    margin-left:-21px;
+    margin-top:-21px;
+  }
+
+  .orbit svg{
+  width:20px !important;
+  height:20px !important;
+}
+
 }

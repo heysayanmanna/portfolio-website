@@ -31,9 +31,9 @@ import {
 function Hero() {
   return (
     <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-40 pb-24"
-    >
+  id="home"
+  className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 pt-32 sm:pt-40 pb-16 sm:pb-24"
+>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
   <div className="particle particle-1"></div>
@@ -54,11 +54,11 @@ function Hero() {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 w-full max-w-[1200px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Left Content */}
           <motion.div
-            className="lg:pt-8 flex flex-col gap-8 -ml-10"
+            className="lg:pt-8 flex flex-col gap-6 lg:gap-8 ml-0 lg:-ml-10"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -76,18 +76,18 @@ function Hero() {
     duration: 3,
     repeat: Infinity,
   }}
-  className="inline-flex items-center w-fit px-5 py-2.5 text-sm rounded-full border border-white/10 bg-white/5 text-gray-300 backdrop-blur-md"
+  className="inline-flex items-center w-fit self-center lg:self-start px-5 py-2.5 text-sm rounded-full border border-white/10 bg-white/5 text-gray-300 backdrop-blur-md"
 >
   🚀 Open to Internships & Freelance Projects
 </motion.span>
 
             {/* Heading */}
-            <h1 className="text-10xl md:text-10xl lg:text-[5.2rem] font-black leading-tight whitespace-nowrap">
-              Sayan <span className="gradient-text">Manna</span>
-            </h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[5.5rem] font-black leading-tight whitespace-nowrap text-center lg:text-left">
+  Sayan <span className="gradient-text">Manna</span>
+</h1>
 
             {/* Subheading */}
-           <div className="flex items-center min-h-[40px]">
+           <div className="flex items-center justify-center lg:justify-start min-h-[40px]">
   <TypeAnimation
     sequence={[
       "Full Stack Developer • Python Developer", 2500,
@@ -102,7 +102,7 @@ function Hero() {
     wrapper="h2"
     speed={50}
     repeat={Infinity}
-    className="text-5xl md:text-3xl text-gray-200 font-bold"
+    className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 font-bold"
   />
 
   <span className="animate-pulse text-blue-400 text-2xl ml-1">
@@ -110,19 +110,21 @@ function Hero() {
   </span>
 </div>
             {/* Description */}
-            <p className="text-gray-400 text-xl leading-relaxed max-w-2xl">
+            <p className="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl text-center lg:text-left">
               I build modern web applications, automation tools and scalable
               software solutions using React, Node.js, MongoDB and Python.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center lg:justify-center gap-5">
               <a
   href="https://github.com/heysayanmanna"
   target="_blank"
   rel="noopener noreferrer"
   className="
   h-15
+  w-full
+  sm:w-auto
   min-w-[240px]
   text-lg
   px-8
@@ -154,6 +156,8 @@ hover:shadow-blue-500/40
   download="Sayan_Manna_Resume.pdf"
   className="
   h-15
+  w-full
+  sm:w-auto
   min-w-[240px]
   text-lg
   px-8
@@ -183,15 +187,17 @@ hover:shadow-xl
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-xl mx-auto lg:mx-auto">
               <div
   className="
   bg-white/5
   border
   border-white/10
   rounded-2xl
-  px-8
-  py-8
+  px-5
+py-6
+sm:px-8
+sm:py-8
   text-center
   backdrop-blur-md
   hover:-translate-y-2
@@ -216,8 +222,10 @@ hover:scale-105
   border
   border-white/10
   rounded-2xl
-  px-8
-  py-8
+  px-5
+py-6
+sm:px-8
+sm:py-8
   text-center
   backdrop-blur-md
   hover:-translate-y-2
@@ -242,8 +250,10 @@ hover:scale-105
   border
   border-white/10
   rounded-2xl
-  px-8
-  py-8
+  px-5
+py-6
+sm:px-8
+sm:py-8
   text-center
   backdrop-blur-md
   hover:-translate-y-2
@@ -269,7 +279,7 @@ hover:scale-105
 
          {/* Right Image */}
 <motion.div
- className="flex justify-center lg:justify-end lg:pr-0 lg:translate-x-10"
+ className="flex justify-center lg:justify-end lg:pr-0 lg:translate-x-16"
   initial={{ opacity: 0, x: 40 }}
   animate={{
     opacity: 1,
@@ -286,7 +296,7 @@ hover:scale-105
     },
   }}
 >
-  <div className="relative w-[520px] h-[520px] flex items-center justify-center">
+  <div className="relative w-full max-w-[520px] aspect-square flex items-center justify-center mx-auto">
 
     {/* Orbit Icons */}
 
@@ -361,28 +371,30 @@ hover:scale-105
   
 
     {/* Glow */}
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl rounded-full"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-[120px] rounded-full"></div>
 
     {/* Profile Image */}
     <img
-      src={profile}
-      alt="Sayan Manna"
-      className="
-      relative
-      w-[500px]
-      md:w-[450px]
-      rounded-3xl
-      border
-      border-white/10
-      shadow-2xl
-      transition-all
-      duration-500
-      hover:scale-105
-      hover:-translate-y-2
-      hover:rotate-1
-      hover:shadow-blue-500/20
-      "
-    />
+  src={profile}
+  alt="Sayan Manna"
+  className="
+  relative
+  w-[280px]
+  sm:w-[350px]
+  md:w-[420px]
+  lg:w-[500px]
+  rounded-3xl
+  border
+  border-white/10
+  shadow-2xl
+  transition-all
+  duration-500
+  hover:scale-105
+  hover:-translate-y-2
+  hover:rotate-1
+  hover:shadow-blue-500/20
+  "
+/>
 
   </div>
 </motion.div>
