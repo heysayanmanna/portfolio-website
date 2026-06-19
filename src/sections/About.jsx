@@ -4,7 +4,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-32 pt-2 pb-12 px-6"
+      className="py-20 md:py-28 lg:py-32 pt-2 pb-12 px-4 sm:px-6"
       style={{ marginBottom: "2rem" }}
     >
 
@@ -22,7 +22,7 @@ function About() {
 
       <div
         style={{
-          width: "90%",
+          width: "95%",
           maxWidth: "1400px",
           margin: "0 auto",
         }}
@@ -43,11 +43,11 @@ function About() {
           </p>
 
           <motion.h2
-  className="text-6xl md:text-7xl font-black tracking-tight gradient-text"
+  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight gradient-text"
   animate={{
     textShadow: [
       "0 0 0px rgba(59,130,246,0)",
-      "0 0 25px rgba(59,130,246,0.35)",
+      "0 0 40px rgba(59,130,246,0.45)",
       "0 0 0px rgba(59,130,246,0)",
     ],
   }}
@@ -67,20 +67,14 @@ function About() {
 
         {/* Cards */}
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.15fr 1.15fr",
-            gap: "3rem",
-            justifyContent: "space-between",
-          }}
+          className="grid lg:grid-cols-2 gap-8"
         >
           {/* Who Am I */}
           <motion.div
             style={{
-              padding: "3.5rem 3rem",
-                minHeight: "750px",
+              padding: "2rem",
             }}
-            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-blue-400/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.35)] hover:-translate-y-2 transition-all duration-500"
+            className="about-card-left relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-blue-400/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.35)] hover:-translate-y-2 transition-all duration-500"
             initial={{ opacity: 0, x: -60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{
@@ -114,7 +108,7 @@ function About() {
                 lineHeight: "2",
                 marginBottom: "1.5rem",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               I'm Sayan Manna, a passionate developer focused on building
               modern, scalable and user-friendly digital experiences.
@@ -128,7 +122,7 @@ function About() {
                 lineHeight: "2",
                 marginBottom: "1.5rem",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               My goal is to continuously improve my technical skills,
               build impactful software products and create digital
@@ -140,7 +134,7 @@ function About() {
                 color: "#e2e8f0",
                 lineHeight: "2",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               I enjoy learning new technologies, building practical software
               solutions and improving my problem-solving skills through
@@ -188,10 +182,9 @@ function About() {
           {/* My Goal */}
           <motion.div
             style={{
-              padding: "3.5rem 3rem",
-                minHeight: "750px",
+              padding: "2rem",
             }}
-            className="relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.35)] hover:-translate-y-2 transition-all duration-500"
+            className="about-card-right relative bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.35)] hover:-translate-y-2 transition-all duration-500"
             initial={{ opacity: 0, x: 60, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{
@@ -225,7 +218,7 @@ function About() {
                 lineHeight: "2",
                 marginBottom: "1.5rem",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               My goal is to become a highly skilled Full Stack Developer
               capable of building professional software products,
@@ -238,7 +231,7 @@ function About() {
                 lineHeight: "2",
                 marginBottom: "1.5rem",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               I aim to work on innovative technologies, contribute to
               meaningful projects and build modern software solutions
@@ -250,7 +243,7 @@ function About() {
                 color: "#e2e8f0",
                 lineHeight: "2",
               }}
-              className="text-2xl"
+              className="text-base sm:text-lg md:text-xl"
             >
               In the future, I aim to work with innovative teams,
               contribute to impactful products and establish myself
