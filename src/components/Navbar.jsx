@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,28 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      moreRef.current &&
+      !moreRef.current.contains(event.target)
+    ) {
+      setMoreOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+  };
+}, []);
+
+
 
   useEffect(() => {
   const sections = ["home", "about", "skills", "projects", "contact"];
@@ -49,6 +73,7 @@ function Navbar() {
   { name: "Skills", link: "#skills", id: "skills" },
   { name: "Projects", link: "#projects", id: "projects" },
   { name: "Contact", link: "#contact", id: "contact" },
+  { name: "More", link: "#more", id: "more" },
 ];
 
   return (
@@ -90,27 +115,60 @@ function Navbar() {
           {navItems.map((item, index) => (
 
             <li
-              key={index}
-              className="relative group"
-            >
+  key={index}
+  className="relative group"
+  ref={item.name === "More" ? moreRef : null}
+>
 
-              <a
-  href={item.link}
-  className={`
-    inline-block
-    text-[18px]
+              {item.name === "More" ? (
+
+  <button
+  onClick={() => setMoreOpen(!moreOpen)}
+  className="
+    flex
+    items-center
+    gap-2
+    text-gray-300
+    hover:text-white
     transition-all
     duration-300
-    hover:scale-105
-    ${
-      activeSection === item.id
-        ? "text-white"
-        : "text-gray-300 hover:text-white"
-    }
-  `}
+  "
 >
-  {item.name}
-</a>
+  More
+
+  <span
+    className={`
+      transition-transform
+      duration-300
+      ${moreOpen ? "rotate-180" : ""}
+    `}
+  >
+    ▼
+  </span>
+
+</button>
+
+) : (
+
+  <a
+    href={item.link}
+    className={`
+      inline-block
+      text-[18px]
+      transition-all
+      duration-300
+      hover:scale-105
+      ${
+        activeSection === item.id
+          ? "text-white"
+          : "text-gray-300 hover:text-white"
+      }
+    `}
+  >
+    {item.name}
+  </a>
+
+)}
 
               <span
   className={`
@@ -130,6 +188,69 @@ function Navbar() {
     }
   `}
 ></span>
+
+
+{item.name === "More" && moreOpen && (
+  <div
+    className="
+      absolute
+      top-10
+      right-0
+      w-64
+      rounded-2xl
+      border
+      border-white/10
+      bg-black/90
+      backdrop-blur-xl
+      p-3
+      shadow-xl
+      shadow-blue-500/10
+      z-50
+    "
+  >
+    <a
+      href="#certificates"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      🏆 Certifications
+    </a>
+
+    <a
+      href="#experience"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      💼 Experience
+    </a>
+
+    <a
+      href="#github-stats"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      🐙 GitHub Stats
+    </a>
+
+    <a
+      href="#leetcode"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      ⚡ LeetCode Stats
+    </a>
+
+    <a
+      href="#testimonials"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      ❤️ Testimonials
+    </a>
+
+    <a
+      href="#blog"
+      className="block px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-white transition"
+    >
+      ✍️ Blog
+    </a>
+  </div>
+)}
 
             </li>
 

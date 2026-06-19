@@ -7,6 +7,12 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { motion, useScroll } from "framer-motion";
 import Loader from "./components/Loader";
+import Certificates from "./sections/Certificates";
+import GitHubStats from "./sections/GitHubStats";
+import LeetCodeStats from "./sections/LeetCodeStats";
+import Experience from "./sections/Experience";
+import Testimonials from "./sections/Testimonials";
+import Blog from "./sections/Blog";
 
 function App() {
 
@@ -35,6 +41,12 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Certificates />
+      <GitHubStats />
+      <LeetCodeStats />
+      <Experience />
+      <Testimonials />
+<Blog />
       <Contact />
       <Footer />
 
