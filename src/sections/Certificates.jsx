@@ -1,25 +1,36 @@
 import { motion } from "framer-motion";
+import sihCertificate from "../assets/sih-certificate.png";
+import aimlCertificate from "../assets/aiml-internship.png";
+import rpaCertificate from "../assets/rpa-certificate.png";
+import agcCertificate from "../assets/agc-certificate.png";
 
 const certificates = [
   {
-    title: "Microsoft Learn AI Skills Challenge",
-    issuer: "Microsoft",
-    year: "2026",
-  },
-  {
-    title: "Python Programming",
-    issuer: "HackerRank",
+    title: "Smart India Hackathon 2025",
+    issuer: "NSHM Knowledge Campus",
     year: "2025",
+    image: sihCertificate,
   },
+
   {
-    title: "Web Development Fundamentals",
-    issuer: "freeCodeCamp",
-    year: "2025",
+    title: "AI-ML Virtual Internship",
+    issuer: "Google for Developers",
+    year: "2024",
+    image: aimlCertificate,
   },
+
   {
-    title: "Cloud Computing Basics",
-    issuer: "Google Cloud",
+    title: "Robotic Process Automation",
+    issuer: "Bhawanipur Global Campus",
     year: "2026",
+    image: rpaCertificate,
+  },
+
+  {
+    title: "Analytics Global Conference 2026",
+    issuer: "AGC 2026",
+    year: "2026",
+    image: agcCertificate,
   },
 ];
 
@@ -83,9 +94,19 @@ function Certificates() {
       "
     >
 
-      <div className="text-5xl mb-5">
-        🏆
-      </div>
+      <img
+  src={cert.image}
+  alt={cert.title}
+  className="
+    w-full
+    h-48
+    object-cover
+    rounded-2xl
+    mb-6
+    border
+    border-white/10
+  "
+/>
 
       <h3 className="text-2xl font-bold mb-4">
         {cert.title}
