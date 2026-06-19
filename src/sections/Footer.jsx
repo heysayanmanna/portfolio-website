@@ -7,12 +7,17 @@ function Footer() {
       <div className="w-[90%] max-w-[1200px] mx-auto">
 
         {/* Main Footer */}
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-20 items-start mt-12">
+        <div className="grid
+grid-cols-1
+md:grid-cols-2
+lg:grid-cols-4
+gap-10
+lg:gap-20 items-start mt-12">
 
           {/* Left Side */}
           <div className="text-center md:text-left">
 
-            <h2 className="text-6xl md:text-7xl font-black gradient-text footer-logo">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black gradient-text footer-logo">
               Sayan.
             </h2>
 
@@ -44,7 +49,7 @@ function Footer() {
 
 </div>
 
-            <p className="text-gray-300 mt-5 text-xl leading-9 max-w-[500px]">
+            <p className="text-gray-300 mt-5 text-base lg:text-xl leading-9 max-w-[500px]">
   Full Stack Developer focused on building modern,
   scalable and user-friendly digital experiences.
 </p>
@@ -155,11 +160,11 @@ function Footer() {
 
   <div className="flex flex-col md:flex-row justify-between items-center gap-5">
 
-    <p className="text-gray-400 text-lg">
+    <p className="text-gray-400 text-sm sm:text-base lg:text-lg">
       © {new Date().getFullYear()} Sayan Manna. All Rights Reserved.
     </p>
 
-    <p className="flex items-center gap-2 text-gray-400 text-lg">
+    <p className="flex items-center gap-2 text-gray-400 text-sm sm:text-base lg:text-lg">
 
       Built with React & Tailwind CSS
 

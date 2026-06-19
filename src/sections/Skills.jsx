@@ -115,7 +115,7 @@ function Skills() {
               style={{
                 background: "rgba(255,255,255,0.03)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                padding: "18px 34px",
+                padding: "14px 24px",
                 borderRadius: "50px",
                 display: "flex",
                 alignItems: "center",
@@ -141,7 +141,7 @@ function Skills() {
               viewport={{ once: true }}
             >
               <motion.i
-  className={`${skill.icon} text-4xl`}
+  className={`${skill.icon} text-2xl md:text-3xl`}
   whileHover={{
     rotate: 360,
     scale: 1.2,
@@ -153,7 +153,7 @@ function Skills() {
 
               <span
                 style={{
-                  fontSize: "20px",
+                  fontSize: "clamp(0.9rem,1.5vw,1.1rem)",
                   fontWeight: 900,
                   color: "#e2e8f0",
                   letterSpacing: "0.03em",
@@ -169,11 +169,11 @@ function Skills() {
         <motion.p
           style={{
             textAlign: "center",
-            maxWidth: "9000px",
+            maxWidth: "900px",
             margin: "4rem auto 5rem auto",
             lineHeight: "2",
             color: "#94a3b8",
-            fontSize: "30px",
+            fontSize: "clamp(1rem,2vw,1.4rem)",
           }}
           initial={{
             opacity: 0,

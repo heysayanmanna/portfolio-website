@@ -21,14 +21,34 @@ function Contact() {
             Let's Connect
           </p>
 
-          <h2 className="contact-title text-7xl md:text-8xl font-black gradient-text mb-10">
+          <h2 className="
+contact-title
+text-4xl
+sm:text-5xl
+md:text-6xl
+lg:text-7xl
+xl:text-8xl
+font-black
+gradient-text
+mb-10
+">
             Contact Me
           </h2>
 
 
 <div className="contact-line"></div>
 
-<p className="max-w-[850px] mx-auto text-gray-300 text-2xl leading-10">
+<p className="
+max-w-[850px]
+mx-auto
+text-gray-300
+text-base
+sm:text-lg
+lg:text-2xl
+leading-8
+lg:leading-10
+px-4
+">
             I'm always open to discussing new opportunities,
             freelance projects, collaborations and exciting ideas.
             Let's build something meaningful together.
@@ -43,17 +63,17 @@ function Contact() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-xl">
+          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-sm sm:text-base lg:text-xl">
             <Briefcase size={18} />
             <span>Open to Internships</span>
           </div>
 
-          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-xl">
+          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-sm sm:text-base lg:text-xl">
             <Rocket size={18} />
             <span>Freelance Projects</span>
           </div>
 
-          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-xl">
+          <div className="contact-badge flex items-center gap-3 px-7 py-5 rounded-2xl bg-white/5 border border-white/10 text-sm sm:text-base lg:text-xl">
             <Users size={18} />
             <span>Collaborations</span>
           </div>
@@ -75,9 +95,9 @@ function Contact() {
             items-center
             justify-center
             gap-3
-            px-10
-            py-5
-            text-xl
+           px-6 sm:px-8 lg:px-10
+py-4 lg:py-5
+text-base sm:text-lg lg:text-xl
             rounded-2xl
             bg-gradient-to-r
             from-blue-500

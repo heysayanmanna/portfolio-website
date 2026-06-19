@@ -56,7 +56,17 @@ function Projects() {
 
 <div className="h-10"></div>
 
-<h2 className="projects-title text-7xl md:text-8xl font-black gradient-text leading-none">
+<h2 className="
+projects-title
+text-4xl
+sm:text-5xl
+md:text-6xl
+lg:text-7xl
+xl:text-8xl
+font-black
+gradient-text
+leading-none
+">
   Featured Projects
 </h2>
 
@@ -65,7 +75,14 @@ function Projects() {
 </motion.div>
 
         {/* Projects Grid */}
-       <div className="grid lg:grid-cols-3 gap-12">
+       <div className="
+grid
+grid-cols-1
+md:grid-cols-2
+xl:grid-cols-3
+gap-8
+lg:gap-12
+">
 
           {projects.map((project, index) => (
 
@@ -137,11 +154,24 @@ hover:scale-[1.03]
               {/* Content */}
               <div className="p-8 flex flex-col flex-1 min-h-[220px]">
 
-                <h3 className="text-3xl font-bold mb-5 leading-tight">
+                <h3 className="
+text-2xl
+sm:text-3xl
+font-bold
+mb-5
+leading-tight
+">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 text-lg leading-8 mb-8">
+                <p className="
+text-gray-300
+text-base
+sm:text-lg
+leading-7
+sm:leading-8
+mb-8
+">
                   {project.description}
                 </p>
 
@@ -185,7 +215,21 @@ hover:scale-[1.03]
 
         {/* Bottom Text */}
         <motion.p
-          className="projects-description text-center text-gray-300 text-xl mt-24 mb-12 max-w-[700px] mx-auto leading-8"
+          className="
+projects-description
+text-center
+text-gray-300
+text-base
+sm:text-lg
+lg:text-xl
+mt-16
+lg:mt-24
+mb-12
+max-w-[700px]
+mx-auto
+leading-8
+px-4
+"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
