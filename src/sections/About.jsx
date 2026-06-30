@@ -1,4 +1,12 @@
 import { motion } from "framer-motion";
+import {
+  HiOutlineMapPin,
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineBolt,
+  HiOutlineMoon,
+  HiOutlineRocketLaunch,
+} from "react-icons/hi2";
 
 function About() {
   return (
@@ -156,7 +164,10 @@ function About() {
   rel="noopener noreferrer"
   className="about-tag location-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
 >
-  📍 West Bengal, India
+  <>
+  <HiOutlineMapPin className="text-red-400 text-lg" />
+  West Bengal, India
+</>
 </a>
 
               <a
@@ -165,7 +176,10 @@ function About() {
   rel="noopener noreferrer"
   className="about-tag college-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
 >
-  🎓 BCA Student
+  <>
+  <HiOutlineAcademicCap className="text-purple-400 text-lg" />
+  BCA Student
+</>
 </a>
 
               <a
@@ -174,7 +188,10 @@ function About() {
   rel="noopener noreferrer"
   className="about-tag linkedin-tag flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-base text-gray-300"
 >
-  💼 Open to Work
+  <>
+  <HiOutlineBriefcase className="text-green-400 text-lg" />
+  Open to Work
+</>
 </a>
             </div>
           </motion.div>
@@ -270,7 +287,7 @@ hover:shadow-lg
 hover:shadow-blue-500/20
 transition-all duration-300
 ">
-                <span className="text-lg">⚡</span>
+               <HiOutlineBolt className="text-yellow-400 text-xl" />
                 I love building projects that solve real problems
               </span>
 
@@ -284,7 +301,7 @@ hover:shadow-lg
 hover:shadow-purple-500/20
 transition-all duration-300
 ">
-                <span className="text-lg">🌙</span>
+                <HiOutlineMoon className="text-indigo-400 text-xl" />
                 I code best late at night
               </span>
 
@@ -298,7 +315,7 @@ hover:shadow-lg
 hover:shadow-cyan-500/20
 transition-all duration-300
 ">
-                <span className="text-lg">🚀</span>
+               <HiOutlineRocketLaunch className="text-cyan-400 text-xl" />
                 Always learning something new every day
               </span>
             </div>

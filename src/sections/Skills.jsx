@@ -1,54 +1,98 @@
 import { motion } from "framer-motion";
+import {
+  HiOutlineCodeBracketSquare,
+  HiOutlineCircleStack,
+  HiOutlineWrenchScrewdriver,
+} from "react-icons/hi2";
 
-const skills = [
-  { name: "HTML5", icon: "devicon-html5-plain colored" },
-  { name: "CSS3", icon: "devicon-css3-plain colored" },
-  { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-  { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+import {
+  TbServer2,
+  TbCloudComputing,
+} from "react-icons/tb";
 
-  { name: "React", icon: "devicon-react-original colored" },
-  { name: "Next.js", icon: "devicon-nextjs-plain" },
-  { name: "Redux Toolkit", icon: "devicon-redux-original colored" },
+import { FaPython } from "react-icons/fa";
 
-  { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
-  { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
-  { name: "Framer Motion", icon: "devicon-framermotion-original" },
+const skillCategories = [
+  {
+    title: "Frontend Development",
+    icon: <HiOutlineCodeBracketSquare size={34} />,
+    skills: [
+      { name: "HTML5", icon: "devicon-html5-plain colored", level: 95 },
+      { name: "CSS3", icon: "devicon-css3-plain colored", level: 92 },
+      { name: "JavaScript", icon: "devicon-javascript-plain colored", level: 90 },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored", level: 75 },
+      { name: "React", icon: "devicon-react-original colored", level: 88 },
+      { name: "Next.js", icon: "devicon-nextjs-plain", level: 70 },
+      { name: "Redux Toolkit", icon: "devicon-redux-original colored", level: 72 },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored", level: 95 },
+      { name: "Bootstrap", icon: "devicon-bootstrap-plain colored", level: 92 },
+      { name: "Framer Motion", icon: "devicon-framermotion-original", level: 85 },
+    ],
+  },
 
-  { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-  { name: "Express.js", icon: "devicon-express-original" },
-  { name: "REST API", icon: "devicon-fastapi-plain colored" },
-  { name: "JWT Auth", icon: "devicon-json-plain" },
-  { name: "Socket.io", icon: "devicon-socketio-original" },
-  { name: "GraphQL", icon: "devicon-graphql-plain colored" },
-  { name: "Microservices", icon: "devicon-docker-plain colored" },
+  {
+    title: "Backend Development",
+    icon: <TbServer2 size={34} />,
+    skills: [
+      { name: "Node.js", icon: "devicon-nodejs-plain colored", level: 70 },
+      { name: "Express.js", icon: "devicon-express-original", level: 68 },
+      { name: "REST API", icon: "devicon-fastapi-plain colored", level: 75 },
+      { name: "JWT Auth", icon: "devicon-json-plain", level: 65 },
+      { name: "Socket.io", icon: "devicon-socketio-original", level: 55 },
+      { name: "GraphQL", icon: "devicon-graphql-plain colored", level: 45 },
+      { name: "Microservices", icon: "devicon-docker-plain colored", level: 40 },
+    ],
+  },
 
-  { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
-  { name: "MySQL", icon: "devicon-mysql-plain colored" },
-  { name: "SQL", icon: "devicon-azuresqldatabase-plain colored" },
-  { name: "Redis", icon: "devicon-redis-plain colored" },
-  { name: "Firebase", icon: "devicon-firebase-plain colored" },
+  {
+    title: "Database",
+    icon: <HiOutlineCircleStack size={34} />,
+    skills: [
+      { name: "MongoDB", icon: "devicon-mongodb-plain colored", level: 75 },
+      { name: "MySQL", icon: "devicon-mysql-plain colored", level: 85 },
+      { name: "SQL", icon: "devicon-azuresqldatabase-plain colored", level: 85 },
+      { name: "Redis", icon: "devicon-redis-plain colored", level: 45 },
+      { name: "Firebase", icon: "devicon-firebase-plain colored", level: 70 },
+    ],
+  },
 
-  { name: "Python", icon: "devicon-python-plain colored" },
-  { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
-  { name: "Pandas", icon: "devicon-pandas-original colored" },
-  { name: "NumPy", icon: "devicon-numpy-original colored" },
-  { name: "Selenium", icon: "devicon-selenium-original colored" },
+  {
+    title: "Python & Automation",
+    icon: <FaPython size={34} />,
+    skills: [
+      { name: "Python", icon: "devicon-python-plain colored", level: 90 },
+      { name: "FastAPI", icon: "devicon-fastapi-plain colored", level: 70 },
+      { name: "Pandas", icon: "devicon-pandas-original colored", level: 75 },
+      { name: "NumPy", icon: "devicon-numpy-original colored", level: 72 },
+      { name: "Selenium", icon: "devicon-selenium-original colored", level: 80 },
+    ],
+  },
 
-  { name: "Docker", icon: "devicon-docker-plain colored" },
-  { name: "Kubernetes", icon: "devicon-kubernetes-plain colored" },
-  { name: "AWS", icon: "devicon-amazonwebservices-original colored" },
-  { name: "Vercel", icon: "devicon-vercel-original" },
+  {
+    title: "Cloud & DevOps",
+    icon: <TbCloudComputing size={34} />,
+    skills: [
+      { name: "Docker", icon: "devicon-docker-plain colored", level: 65 },
+      { name: "Kubernetes", icon: "devicon-kubernetes-plain colored", level: 40 },
+      { name: "AWS", icon: "devicon-amazonwebservices-original colored", level: 45 },
+      { name: "Vercel", icon: "devicon-vercel-original", level: 90 },
+    ],
+  },
 
-  { name: "Git", icon: "devicon-git-plain colored" },
-  { name: "GitHub", icon: "devicon-github-original" },
-  { name: "GitHub Actions", icon: "devicon-githubactions-plain colored" },
-
-  { name: "Linux", icon: "devicon-linux-plain" },
-  { name: "NPM", icon: "devicon-npm-original-wordmark colored" },
-
-  { name: "VS Code", icon: "devicon-vscode-plain colored" },
-  { name: "Postman", icon: "devicon-postman-plain colored" },
-  { name: "Figma", icon: "devicon-figma-plain colored" },
+  {
+    title: "Tools",
+    icon: <HiOutlineWrenchScrewdriver size={34} />,
+    skills: [
+      { name: "Git", icon: "devicon-git-plain colored", level: 90 },
+      { name: "GitHub", icon: "devicon-github-original", level: 95 },
+      { name: "GitHub Actions", icon: "devicon-githubactions-plain colored", level: 60 },
+      { name: "Linux", icon: "devicon-linux-plain", level: 60 },
+      { name: "NPM", icon: "devicon-npm-original-wordmark colored", level: 90 },
+      { name: "VS Code", icon: "devicon-vscode-plain colored", level: 98 },
+      { name: "Postman", icon: "devicon-postman-plain colored", level: 88 },
+      { name: "Figma", icon: "devicon-figma-plain colored", level: 82 },
+    ],
+  },
 ];
 
 function Skills() {
@@ -97,73 +141,161 @@ function Skills() {
         </motion.div>
 
         {/* Skills */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "2rem",
-          }}
-        >
-          {skills.map((skill, index) => (
-            <motion.div
-             whileHover={{
-    y: -8,
-    scale: 1.05,
-  }}
-              key={index}
-              style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                padding: "14px 24px",
-                borderRadius: "50px",
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-                cursor: "pointer",
-              }}
-              className="skill-pill backdrop-blur-md hover:bg-white/10 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/15 hover:-translate-y-1 transition-all duration-500"
-              initial={{
-                opacity: 0,
-                y: 40,
-                scale: 0.95,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.05,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true }}
-            >
-              <motion.i
-  className={`${skill.icon} text-2xl md:text-3xl`}
-  whileHover={{
-    rotate: 360,
-    scale: 1.2,
-  }}
-  transition={{
-    duration: 0.6,
-  }}
-></motion.i>
+        
+        {/* Skills Cards Coming Here */}
 
-              <span
-                style={{
-                  fontSize: "clamp(0.9rem,1.5vw,1.1rem)",
-                  fontWeight: 900,
-                  color: "#e2e8f0",
-                  letterSpacing: "0.03em",
-                }}
-              >
-                {skill.name}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-start">
+
+  {skillCategories.map((category, index) => (
+
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.12,
+      }}
+      viewport={{ once: true }}
+      className="
+      bg-white/5
+      border
+      border-white/5
+      rounded-2xl
+      p-5
+      min-h-[580px]
+      backdrop-blur-xl
+      hover:border-cyan-400/40
+      hover:bg-white/10
+      transition-all
+      duration-500
+      hover:-translate-y-2
+hover:shadow-2xl
+hover:shadow-cyan-500/25
+      "
+    >
+
+      {/* Category Header */}
+{/* Category Header */}
+
+<div className="flex items-center justify-between mb-4">
+
+  <div className="flex items-center gap-4">
+
+    <div
+      className="
+      w-14
+      h-14
+      rounded-2xl
+      flex
+      items-center
+      justify-center
+      bg-gradient-to-br
+      from-cyan-500/15
+      to-blue-500/15
+      border
+      border-cyan-400/20
+      text-cyan-400
+      shadow-lg
+      shadow-cyan-500/10
+      transition-all
+      duration-500
+      group-hover:scale-110
+      "
+    >
+      {category.icon}
+    </div>
+
+    <div>
+
+      <h3 className="text-xl font-bold text-white">
+        {category.title}
+      </h3>
+
+      <p className="text-sm text-gray-400">
+        {category.skills.length} Technologies
+      </p>
+
+    </div>
+
+  </div>
+
+  <span
+    className="
+    px-3
+    py-1
+    rounded-full
+    text-xs
+    font-semibold
+    bg-cyan-500/10
+    border
+    border-cyan-500/20
+    text-cyan-300
+    "
+  >
+    Advanced
+  </span>
+
+</div>
+
+      {/* Skills */}
+
+      <div className="space-y-3">
+
+        {category.skills.map((skill, i) => (
+
+          <div key={i}>
+
+           <div className="space-y-2">
+
+  <div className="flex items-center justify-between">
+
+    <div className="flex items-center gap-2">
+
+      <i className={`${skill.icon} text-lg`}></i>
+
+      <span className="text-sm font-medium text-gray-200">
+        {skill.name}
+      </span>
+
+    </div>
+
+    <span className="text-sm font-semibold text-cyan-400">
+      {skill.level}%
+    </span>
+
+  </div>
+
+  <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+
+    <motion.div
+      initial={{ width: 0 }}
+      whileInView={{ width: `${skill.level}%` }}
+      transition={{
+        duration: 1,
+        delay: i * 0.08,
+      }}
+      viewport={{ once: true }}
+      className="h-full rounded-full bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500"
+    />
+
+  </div>
+
+</div>
+
+            
+
+          </div>
+
+        ))}
+
+      </div>
+
+    </motion.div>
+
+  ))}
+
+</div>
 
         {/* Description */}
         <motion.p

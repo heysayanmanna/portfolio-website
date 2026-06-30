@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import resume from "../assets/resume.pdf";
 import { TypeAnimation } from "react-type-animation";
 import CountUp from 'react-countup';
+import { HiOutlineBriefcase } from "react-icons/hi2";
 
 
 
@@ -78,7 +79,14 @@ function Hero() {
   }}
   className="inline-flex items-center w-fit self-center lg:self-start px-5 py-2.5 text-sm rounded-full border border-white/10 bg-white/5 text-gray-300 backdrop-blur-md"
 >
-  🚀 Open to Internships & Freelance Projects
+  <HiOutlineBriefcase
+  className="text-blue-400 text-lg mr-2"
+/>
+
+<span>
+  Open to Internships & Freelance Projects
+</span>
+  
 </motion.span>
 
             {/* Heading */}
@@ -118,7 +126,7 @@ function Hero() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center lg:justify-center gap-5">
               <a
-  href="https://github.com/heysayanmanna"
+  href="https://github.com/iamsayanmanna"
   target="_blank"
   rel="noopener noreferrer"
   className="
